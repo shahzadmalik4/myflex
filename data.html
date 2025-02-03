@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello world</h1>
+    <h2>heading 2</h2>
+    <button>click me</button>
+<input type="text" placeholder="enter username">
+<input type="password" placeholder="enter password" id="pass">
+<input type="checkbox" id="checkbox">
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1").hide()
+            })
+            $("button").hover(
+                function(){
+                    $(this).css("background-color", "red")
+                },
+               
+            )
+           
+            $("#checkbox").click(function(){
+                if ($("#pass").attr("type")=="password") {
+                    $("#pass").attr("type", "text")
+                } else {
+                    $("#pass").attr("type", "password")
+                    
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>
